@@ -8,36 +8,130 @@ use App\Models\Question;
 class QuestionSeeder extends Seeder {
     public function run() {
         $questions = [
-            ['question' => '1.Cada consulta de las siguientes forma parte de una transacción implícita excepto una:', 'option_a' => 'Select', 'option_b' => 'Create proc', 'option_c' => 'Insert', 'option_d' => 'Delete', 'correct_option' => 'B'],
-            ['question' => '2.Tipo de fragmentación en el que cada fragmento debe incluir la clave primaria de la tabla. Su reconstrucción se realizará con una operación de join de los fragmentos componentes:', 'option_a' => 'Vertical', 'option_b' => 'Horizontal', 'option_c' => 'Mixto', 'option_d' => 'Ninguna de las anteriores', 'correct_option' => 'A'],
-            ['question' => '3.Es una ventaja de los sistemas gestores de bases de datos distribuidas:', 'option_a' => 'Costo', 'option_b' => 'Control integral', 'option_c' => 'Disponibilidad', 'option_d' => 'Experiencia de uso', 'correct_option' => 'C'],
-            ['question' => '4.Se refiere a que el SGBDD puede mantener una copia de un fragmento en varios nodos diferentes:', 'option_a' => 'Diseño conceptual', 'option_b' => 'Asignación', 'option_c' => 'Replicación', 'option_d' => 'Fragmentación', 'correct_option' => 'C'],
-            ['question' => '5.Es una desventaja de los sistemas gestores de bases de datos distribuidas:', 'option_a' => 'Integración', 'option_b' => 'Seguridad', 'option_c' => 'Fiabilidad', 'option_d' => 'Crecimiento', 'correct_option' => 'B'],
-            ['question' => '6.Un sistema distribuido de bases de datos consiste en un conjunto de ___, cada uno de los cuales puede participar en la ejecución de transacciones que accedan a datos de una o varias de ellas:', 'option_a' => 'Base de Datos', 'option_b' => 'Tablas', 'option_c' => 'Localidades', 'option_d' => 'Fragmentos', 'correct_option' => 'C'],
-            ['question' => '7.Software que permite gestionar la base de datos distribuida y hace que dicha distribución sea transparente para los usuarios:', 'option_a' => 'SGBDD', 'option_b' => 'SGBDOO', 'option_c' => 'SGBD', 'option_d' => 'SGBDR', 'correct_option' => 'A'],
-            ['question' => '8.Se establecen para operaciones de sólo lectura, por ejemplo “select”', 'option_a' => 'Bloqueos de esquema', 'option_b' => 'Bloqueos actualizados', 'option_c' => 'Bloqueos compartidos', 'option_d' => 'Bloqueos de intención', 'correct_option' => 'C'],
-            ['question' => '9.Se concede un bloqueo de este tipo a una transacción cuando ésta está lista para modificar los datos:', 'option_a' => 'Intención', 'option_b' => 'Exclusivo', 'option_c' => 'Inclusivo', 'option_d' => 'Esquema', 'correct_option' => 'B'],
-            ['question' => '10.En ellos se almacenan los objetos del esquema de la BD (tablas, índices, etc.), pudiéndose repartir por varios ficheros:', 'option_a' => 'Tablespaces', 'option_b' => 'Base de Datos', 'option_c' => 'Tablas', 'option_d' => 'Procedimientos almacenados', 'correct_option' => 'A'],
-            ['question' => '11.Establece un punto específico en donde permite hacer un rollback parcial:', 'option_a' => 'Begin Tran', 'option_b' => 'Commit Tran', 'option_c' => 'Save Tran', 'option_d' => 'Rollback Tran', 'correct_option' => 'C'],
-            ['question' => '12.Hace a la transacción permanente, parte irreversible de la base de datos:', 'option_a' => 'Rollback', 'option_b' => 'Save', 'option_c' => 'Commit', 'option_d' => 'Begin', 'correct_option' => 'C'],
-            ['question' => '13.Tablespace llamado ________ que se crea automáticamente al hacer la instalación de SQL Server, o al crear una BD. Contiene el diccionario de datos:', 'option_a' => 'SYSTEM', 'option_b' => 'DICTIONARY', 'option_c' => 'SYSADMIN', 'option_d' => 'USER', 'correct_option' => 'A'],
-            ['question' => '14.El procedimiento almacenado que proporciona los bloqueos activos en el sistema gestor de bases de datos:', 'option_a' => 'sp_indexoption', 'option_b' => 'sp_helptext', 'option_c' => 'sp_desc', 'option_d' => 'sp_lock', 'correct_option' => 'D'],
-            ['question' => '15.Son los encargados de hacer que las transacciones tengan la propiedad de aislamiento:', 'option_a' => 'Rendimientos', 'option_b' => 'Transacciones', 'option_c' => 'Bloqueos', 'option_d' => 'RollBack’s', 'correct_option' => 'C'],
-            ['question' => '16.Una transacción que se ejecute con este nivel de aislamiento no será inmune a las lecturas sucias, lecturas no repetibles ni lecturas fantasma.', 'option_a' => 'Lectura de transacciones', 'option_b' => 'Lectura de datos confirmados', 'option_c' => 'Lectura repetible', 'option_d' => 'Lectura de datos no confirmados', 'correct_option' => 'D'],
-            ['question' => '17.Nivel de aislamiento más restrictivo ya que aplica un bloqueo al rango de datos leídos. Proporciona, por tanto, protección ante lectura de filas fantasma.', 'option_a' => 'Repeatable read', 'option_b' => 'Snapshot', 'option_c' => 'Read uncommitted', 'option_d' => 'Serializable', 'correct_option' => 'D'],
-            ['question' => '18.Con este nivel de aislamiento las consultas de la transacción en curso sólo leerán los datos confirmados antes del comienzo de la misma.', 'option_a' => 'Commit', 'option_b' => 'Read uncommitted', 'option_c' => 'Snapshot', 'option_d' => 'Rollback', 'correct_option' => 'C'],
-            ['question' => '19.La transacción mantiene bloqueos compartidos durante el tiempo que dure la lectura.', 'option_a' => 'Read committed', 'option_b' => 'Rollback', 'option_c' => 'Read uncommitted', 'option_d' => 'Commit', 'correct_option' => 'A'],
-            ['question' => '20.Aborta la transacción y la hace terminar en forma no exitosa, cualquier cambio que la transacción pudo hacer a la BD se deshace.', 'option_a' => 'Commit', 'option_b' => 'Rollback', 'option_c' => 'End', 'option_d' => 'Begin', 'correct_option' => 'B'],
-            ['question' => '21.En una base de datos distribuida, los datos se pueden encontrar distribuidos en diferentes sitios y cada uno de estos sitios pueden contar con copias del mismo objeto, o partes de él, por ejemplo, una relación. A este tipo de distribución se le llama.', 'option_a' => 'Ionización', 'option_b' => 'Colección', 'option_c' => 'Fragmentación', 'option_d' => 'Distribución', 'correct_option' => 'C'],
-            ['question' => '22.Consultas que deben ser consideradas como “todo o nada”.', 'option_a' => 'Relacionales', 'option_b' => 'SELECT’s', 'option_c' => 'INSERT’s', 'option_d' => 'Transacciones', 'correct_option' => 'D'],
-            ['question' => '23.Es el concepto que habla de un conjunto de cosas actuando como una unidad.', 'option_a' => 'Bases de Datos', 'option_b' => 'Atomicidad', 'option_c' => 'Transacciones', 'option_d' => 'Copias de seguridad', 'correct_option' => 'B'],
-            ['question' => '24.Los usuarios ven cada objeto de datos como lógicamente único.', 'option_a' => 'Transparencia de la fragmentación', 'option_b' => 'Transparencia de la ubicación', 'option_c' => 'Transparencia de ejecución', 'option_d' => 'Transparencia de la réplica', 'correct_option' => 'A'],
-            ['question' => '25.Una tabla T se divide en subconjuntos, T1, T2, ...Tn. Los fragmentos se definen a través de una operación de selección y su reconstrucción se realizará con una operación de unión de los fragmentos componentes.', 'option_a' => 'Fragmentación Vertical', 'option_b' => 'Fragmentación Horizontal', 'option_c' => 'Fragmentación', 'option_d' => 'Fragmentación Mixta', 'correct_option' => 'B'],
-            ['question' => '26.Es aquella que accede a los datos del único sitio en el cual se inició la transacción.', 'option_a' => 'Transacción Global', 'option_b' => 'Transacción Segmentada', 'option_c' => 'Transacción Local', 'option_d' => 'Transacción Unilateral', 'correct_option' => 'C'],
-            ['question' => '27.Tipo de transparencia que permite la integración de varios DBMSs bajo un esquema de trabajo en común.', 'option_a' => 'Distribución', 'option_b' => 'Ejecución', 'option_c' => 'Transacción', 'option_d' => 'Heterogeneidad', 'correct_option' => 'D'],
-            ['question' => '28.Tipo de transparencia en donde el usuario no sabe dónde están localizados los datos, si están replicados o particionados.', 'option_a' => 'Transacción', 'option_b' => 'Fallos', 'option_c' => 'Distribución', 'option_d' => 'Ejecución', 'correct_option' => 'C'],
-            ['question' => '29.NO es un componente de las bases de datos distribuidas.', 'option_a' => 'Software y Hardware de RED', 'option_b' => 'Sistema operativo multitarea', 'option_c' => 'Estaciones de trabajo', 'option_d' => 'Procesador de transacciones', 'correct_option' => 'B'],
-            ['question' => '30.Están compuestas de fragmentos de bases de datos las cuales están localizadas y replicadas en diferentes y varios sitios.', 'option_a' => 'Base de Datos Orientada a Objetos', 'option_b' => 'Base de Datos Relacionales', 'option_c' => 'Base de Datos', 'option_d' => 'Base de Datos Distribuidas', 'correct_option' => 'D'],
+            ['question' => '1. ¿Cuál de los siguientes es un ejemplo de un panel de discusión?', 
+            'option_a' => 'Un grupo de amigos hablando sobre películas en una cafetería', 
+            'option_b' => 'Un grupo de médicos discutiendo sobre los avances en inteligencia artificial en la medicina', 
+            'option_c' => '[Ilegible]', 
+            'option_d' => 'Un grupo de empleados debatiendo sobre nuevas políticas laborales', 
+            'correct_option' => 'B'],
+        
+            ['question' => '2. Técnica de comunicación y toma de decisiones en la que un grupo de personas se reúne para debatir, discutir y/o resolver temas de interés común, usada desde la democracia ateniense.', 
+            'option_a' => 'Debate', 
+            'option_b' => 'Ponencia', 
+            'option_c' => 'Discurso', 
+            'option_d' => 'Asamblea', 
+            'correct_option' => 'D'],
+        
+            ['question' => '3. Es aquella que se establece entre los miembros de un grupo pequeño de individuos o de manera interpersonal, es cotidiana, simple y natural.', 
+            'option_a' => 'Conferencia', 
+            'option_b' => 'Comunicación formal', 
+            'option_c' => 'Diálogo', 
+            'option_d' => 'Comunicación informal', 
+            'correct_option' => 'C'],
+        
+            ['question' => '4. Técnica de comunicación que consiste en la confrontación organizada de ideas u opiniones diferentes sobre un tema determinado, en la que dos o más personas exponen y defienden sus puntos de vista.', 
+            'option_a' => 'Debate', 
+            'option_b' => 'Conferencia', 
+            'option_c' => 'Tertulia', 
+            'option_d' => 'Asamblea', 
+            'correct_option' => 'A'],
+        
+            ['question' => '5. ¿Cuál de los siguientes NO es un participante de las asambleas?', 
+            'option_a' => 'Secretario', 
+            'option_b' => 'Presidente', 
+            'option_c' => 'Moderador', 
+            'option_d' => 'Vocales o Consejeros', 
+            'correct_option' => 'C'],
+        
+            ['question' => '6. Reunión informal y periódica de personas para conversar y debatir sobre un tema específico o intereses compartidos.', 
+            'option_a' => 'Panel', 
+            'option_b' => 'Tertulia', 
+            'option_c' => 'Discurso', 
+            'option_d' => 'Mesa redonda', 
+            'correct_option' => 'B'],
+        
+            ['question' => '7. Son ejemplos de técnicas de comunicación formal.', 
+            'option_a' => 'Tertulia, Debate, Panel, Discurso.', 
+            'option_b' => 'Panel, Discurso, Conferencia, Ponencia.', 
+            'option_c' => 'Mesa redonda, asamblea, coloquio, debate', 
+            'option_d' => 'Conferencia, Discurso, Ponencia, Debate', 
+            'correct_option' => 'C'],
+        
+            ['question' => '8. Su propósito es transmitir conocimientos, ideas o experiencias a una audiencia interesada en el tema. También puede fomentar la discusión y el intercambio de opiniones mediante preguntas al público.', 
+            'option_a' => 'Asamblea', 
+            'option_b' => 'Seminario', 
+            'option_c' => 'Mesa redonda', 
+            'option_d' => 'Conferencia', 
+            'correct_option' => 'D'],
+        
+            ['question' => '9. Tiene como propósito transmitir un mensaje claro, organizado y efectivo al público, también sirve para motivar, influenciar o inspirar a los oyentes.', 
+            'option_a' => 'Monólogo', 
+            'option_b' => 'Ponencia', 
+            'option_c' => 'Discurso', 
+            'option_d' => 'Asamblea', 
+            'correct_option' => 'C'],
+        
+            ['question' => '10. ¿Cuál es un posible desafío de la mesa redonda?', 
+            'option_a' => 'Puede ser difícil llegar a un consenso entre los participantes.', 
+            'option_b' => 'Solo puede utilizarse en contextos académicos', 
+            'option_c' => 'No se permite la participación del público', 
+            'option_d' => 'No se puede utilizar en debates informales', 
+            'correct_option' => 'A'],
+        
+            ['question' => '11. Proceso en el que las personas intercambian y valoran ideas e información con el objetivo de aumentar el conocimiento de un tema determinado o de resolver un problema que afecta a los miembros de una comunidad.', 
+            'option_a' => 'Conferencia', 
+            'option_b' => 'Comunicación formal', 
+            'option_c' => 'Diálogo', 
+            'option_d' => 'Comunicación informal', 
+            'correct_option' => 'A'],
+        
+            ['question' => '12. Es un diálogo formal que se realiza entre varias personas sobre un tema específico, su objetivo es fomentar el análisis crítico y la reflexión, también permite ampliar el conocimiento y considerar distintas perspectivas.', 
+            'option_a' => 'Coloquio', 
+            'option_b' => 'Debate', 
+            'option_c' => 'Tertulia', 
+            'option_d' => 'Conferencia', 
+            'correct_option' => 'B'],
+        
+            ['question' => '13. El moderador es el encargado de guiar la discusión y mantener el orden en una mesa redonda.', 
+            'option_a' => 'Verdadero', 
+            'option_b' => 'Falso', 
+            'option_c' => '', 
+            'option_d' => '', 
+            'correct_option' => 'A'],
+        
+            ['question' => '14. En un panel de discusión, los panelistas siempre deben estar de acuerdo entre sí para que la conversación sea ordenada y productiva.', 
+            'option_a' => 'Verdadero', 
+            'option_b' => 'Falso', 
+            'option_c' => '', 
+            'option_d' => '', 
+            'correct_option' => 'B'],
+        
+            ['question' => '15. El coloquio, debate y la tertulia son técnicas de la comunicación informal.', 
+            'option_a' => 'Verdadero', 
+            'option_b' => 'Falso', 
+            'option_c' => '', 
+            'option_d' => '', 
+            'correct_option' => 'A'],
+
+            /*['question' => '16. Acción de comunicar algo a alguien reservadamente o en secreto". Proviene del latín fidare, fiar.', 'option_a' => 'Confidencia', 'option_b' => 'Coloquio', 'option_c' => 'Diálogo', 'option_d' => 'Conversación', 'correct_option' => 'A'],
+    
+            ['question' => '17. En ésta comunicación las personas que hablan se llaman interlocutores, debe estar caracterizado por una apertura sin reservas.', 'option_a' => 'Coloquio', 'option_b' => 'Diálogo', 'option_c' => 'Conversación', 'option_d' => 'Confidencia', 'correct_option' => 'B'],
+            
+            ['question' => '18. Es independiente de todo contrato, se extiende a todo lo que, ya sea descubierto por casualidad, por investigación personal o por confidencia, y no puede divulgarse.', 'option_a' => 'Secreto prometido', 'option_b' => 'Secreto confiado', 'option_c' => 'Secreto natural', 'option_d' => 'Coloquio', 'correct_option' => 'C'],
+            
+            ['question' => '19. Es una discusión informal, realizada por un grupo de especialistas o "expertos", para analizar los diferentes aspectos de un tema, aclarar controversias o tratar de resolver problemas de su interés.', 'option_a' => 'Panel', 'option_b' => 'Mesa redonda', 'option_c' => 'Asamblea', 'option_d' => 'Conferencia', 'correct_option' => 'A'],
+            
+            ['question' => '20. Es la reunión de varias personas, tres o seis por lo general, para exponer sobre un tema predeterminado y preparado, bajo la dirección de un moderador. Su objetivo es suministrar nuevos conocimientos sobre un tema interesante.', 'option_a' => 'Panel', 'option_b' => 'Mesa redonda', 'option_c' => 'Asamblea', 'option_d' => 'Conferencia', 'correct_option' => 'B'],
+            
+            ['question' => '21. Son reuniones planificadas dirigidas por un moderador en las que participa un número amplio de personas. Su objeto es discutir entre todos una cuestión con el fin de tomar decisiones o llegar a algún tipo de acuerdo mediante votación de los asistentes.', 'option_a' => 'Panel', 'option_b' => 'Mesa redonda', 'option_c' => 'Asamblea', 'option_d' => 'Conferencia', 'correct_option' => 'C'],
+            
+            ['question' => '22. Es cuando se exponen los resultados de los análisis ante una o más personas, es un "discurso" porque se limitan a escuchar y usar su inteligencia para discernir lo que se dice.', 'option_a' => 'Panel', 'option_b' => 'Mesa redonda', 'option_c' => 'Asamblea', 'option_d' => 'Conferencia', 'correct_option' => 'D'],
+            
+            ['question' => '23. Es una de las características del discurso y persigue la clara compresión de un asunto, tema o idea que resuelve una incertidumbre.', 'option_a' => 'Informar', 'option_b' => 'Entretener', 'option_c' => 'Convencer', 'option_d' => 'Argumentar', 'correct_option' => 'A'],
+            
+            ['question' => '24. En la conclusión del guion, es aquella donde debemos preocuparnos en cada una de las palabras que expresamos, en los puntos principales que acciona el emisor y estos a su vez, produzcan una impresión entre los receptores.', 'option_a' => 'Originalidad', 'option_b' => 'Exactitud', 'option_c' => 'Claridad', 'option_d' => 'Concisión', 'correct_option' => 'B'],
+            
+            ['question' => '25. Es una declaración larga y compleja del tema a redactar, en donde la idea reside en las acciones principales que el orador realiza y manifiesta el propósito de que el receptor o los receptores puedan crear preguntas en su mente.', 'option_a' => 'Originalidad', 'option_b' => 'Exactitud', 'option_c' => 'Claridad', 'option_d' => 'Concisión', 'correct_option' => 'D']*/
         ];
 
         foreach ($questions as $question) {
