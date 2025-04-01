@@ -27,7 +27,7 @@ class QuestionSeeder extends Seeder {
             'option_b' => 'Comunicación formal', 
             'option_c' => 'Diálogo', 
             'option_d' => 'Comunicación informal', 
-            'correct_option' => 'C'],
+            'correct_option' => 'D'],
         
             ['question' => '4. Técnica de comunicación que consiste en la confrontación organizada de ideas u opiniones diferentes sobre un tema determinado, en la que dos o más personas exponen y defienden sus puntos de vista.', 
             'option_a' => 'Debate', 
@@ -55,7 +55,7 @@ class QuestionSeeder extends Seeder {
             'option_b' => 'Panel, Discurso, Conferencia, Ponencia.', 
             'option_c' => 'Mesa redonda, asamblea, coloquio, debate', 
             'option_d' => 'Conferencia, Discurso, Ponencia, Debate', 
-            'correct_option' => 'C'],
+            'correct_option' => 'B'],
         
             ['question' => '8. Su propósito es transmitir conocimientos, ideas o experiencias a una audiencia interesada en el tema. También puede fomentar la discusión y el intercambio de opiniones mediante preguntas al público.', 
             'option_a' => 'Asamblea', 
@@ -83,14 +83,14 @@ class QuestionSeeder extends Seeder {
             'option_b' => 'Comunicación formal', 
             'option_c' => 'Diálogo', 
             'option_d' => 'Comunicación informal', 
-            'correct_option' => 'A'],
+            'correct_option' => 'C'],
         
             ['question' => '12. Es un diálogo formal que se realiza entre varias personas sobre un tema específico, su objetivo es fomentar el análisis crítico y la reflexión, también permite ampliar el conocimiento y considerar distintas perspectivas.', 
             'option_a' => 'Coloquio', 
             'option_b' => 'Debate', 
             'option_c' => 'Tertulia', 
             'option_d' => 'Conferencia', 
-            'correct_option' => 'B'],
+            'correct_option' => 'A'],
         
             ['question' => '13. El moderador es el encargado de guiar la discusión y mantener el orden en una mesa redonda.', 
             'option_a' => 'Verdadero', 
@@ -111,7 +111,7 @@ class QuestionSeeder extends Seeder {
             'option_b' => 'Falso', 
             'option_c' => '', 
             'option_d' => '', 
-            'correct_option' => 'A'],
+            'correct_option' => 'B'],
 
             /*['question' => '16. Acción de comunicar algo a alguien reservadamente o en secreto". Proviene del latín fidare, fiar.', 'option_a' => 'Confidencia', 'option_b' => 'Coloquio', 'option_c' => 'Diálogo', 'option_d' => 'Conversación', 'correct_option' => 'A'],
     
