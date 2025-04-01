@@ -89,7 +89,7 @@
     @extends('layouts.app')
     @section('content')
         <div class="container">
-            <h2>📚 Cuestionario de Expresión Oral</h2>
+            <h2>📚 Cuestionario de Expresión Oral 📚</h2>
             <form method="POST" action="{{ route('quiz.submit') }}">
                 @csrf
                 @foreach($questions as $question)
