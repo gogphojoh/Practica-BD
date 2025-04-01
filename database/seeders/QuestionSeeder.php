@@ -146,7 +146,6 @@ class QuestionSeeder extends Seeder {
         }
     }
 }
-
         /*$questions = [
             ['question' => '¿Qué son los datos no estructurados?', 'option_a' => 'Datos con un esquema predefinido', 'option_b' => 'Datos en tablas relacionales', 'option_c' => 'Datos que no tienen un esquema predefinido y pueden estar en distintos formatos', 'option_d' => 'Datos almacenados en SQL', 'correct_option' => 'C'],
             ['question' => '¿Cuál de las siguientes bases de datos es orientada a documentos?', 'option_a' => 'PostgreSQL', 'option_b' => 'MongoDB', 'option_c' => 'Oracle', 'option_d' => 'MySQL', 'correct_option' => 'B'],
