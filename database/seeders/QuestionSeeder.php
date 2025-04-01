@@ -111,7 +111,7 @@ class QuestionSeeder extends Seeder {
             'option_b' => 'Falso', 
             'option_c' => '', 
             'option_d' => '', 
-            'correct_option' => 'B'],
+            'correct_option' => 'A'],
 
             /*['question' => '16. Acción de comunicar algo a alguien reservadamente o en secreto". Proviene del latín fidare, fiar.', 'option_a' => 'Confidencia', 'option_b' => 'Coloquio', 'option_c' => 'Diálogo', 'option_d' => 'Conversación', 'correct_option' => 'A'],
     
